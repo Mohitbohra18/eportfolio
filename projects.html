@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Bohra - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-xl font-bold text-gray-800">Mohit Bohra</div>
+            <div class="space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
+                <a href="skills.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Skills</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Projects</a>
+                <a href="achievements.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Achievements</a>
+                <a href="takeaways.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Takeaways</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="section-container pt-20">
+        <h2 class="text-4xl font-bold mb-8 text-center">My Projects</h2>
+        <div class="carousel" id="project-carousel">
+            <button class="carousel-arrow" onclick="prevProject()" aria-label="Previous Project">&#8592;</button>
+            <div class="carousel-card" id="carousel-card">
+                <!-- Project content will be injected here by JS -->
+            </div>
+            <button class="carousel-arrow" onclick="nextProject()" aria-label="Next Project">&#8594;</button>
+        </div>
+    </div>
+    <script>
+    const projects = [
+      {
+        title: '🌱 Fertilizer Recommendation System',
+        problem: 'Farmers often lack precise, data-driven guidance for fertilizer use, leading to poor yields and environmental harm.',
+        solution: 'Built a machine learning system that analyzes soil, crop, and weather data to recommend optimal NPK ratios.',
+        role: 'Designed the ML pipeline, built the web app, and led user testing with local farmers.',
+        impact: 'Helped farmers increase yields by 15% and reduce fertilizer waste.',
+        tech: 'Python, Scikit-learn, Pandas, Flask',
+      },
+      {
+        title: '☀️ Solar Fault Detection using ML',
+        problem: 'Manual inspection of solar panels is slow and error-prone, risking energy loss.',
+        solution: 'Developed a computer vision system using deep learning to detect and classify faults in solar panels from images.',
+        role: 'Authored the research paper, built and trained the model, and presented at AUTOCOM conference.',
+        impact: 'Reduced fault detection time by 80% and improved maintenance efficiency.',
+        tech: 'Python, TensorFlow, Keras, OpenCV',
+      },
+      {
+        title: '💻 Algorithm Optimization Suite',
+        problem: 'Many students struggle with inefficient code in competitive programming and real-world apps.',
+        solution: 'Created a suite of optimized algorithms and data structures with real-world examples and benchmarks.',
+        role: 'Designed, implemented, and documented all algorithms; led workshops for peers.',
+        impact: 'Improved code efficiency for 100+ students and developers.',
+        tech: 'C++, Java, Data Structures, Algorithms',
+      },
+      {
+        title: '🤖 Jarvis: Voice-based OS Assistant',
+        problem: 'Performing system operations manually can be time-consuming and less accessible for some users.',
+        solution: 'Developed a voice-controlled assistant using Python and Flask that executes system operations (like opening apps, searching files, controlling volume) via natural language commands.',
+        role: 'Built the voice recognition pipeline, integrated system command execution, and designed the Flask web interface.',
+        impact: 'Enabled hands-free, accessible, and efficient system control for users, improving productivity and accessibility.',
+        tech: 'Python, Flask, SpeechRecognition, pyttsx3',
+      },
+      {
+        title: '🔄 Transpiler: Markdown to HTML Converter',
+        problem: 'Converting markdown files to HTML manually is tedious and error-prone, especially for non-technical users.',
+        solution: 'Created a web-based transpiler using Python and Flask that converts markdown files into clean, responsive HTML markup.',
+        role: 'Implemented the markdown parsing logic, built the Flask web app, and designed the user interface.',
+        impact: 'Streamlined the workflow for content creators and developers, saving time and reducing errors in documentation and web publishing.',
+        tech: 'Python, Flask, markdown2',
+      },
+    ];
+    let current = 0;
+    function renderProject(idx) {
+      const p = projects[idx];
+      document.getElementById('carousel-card').innerHTML = `
+        <h3 class="text-2xl font-bold mb-3">${p.title}</h3>
+        <p class="mb-2"><span class="font-semibold text-accent3">Problem:</span> ${p.problem}</p>
+        <p class="mb-2"><span class="font-semibold text-accent3">Solution:</span> ${p.solution}</p>
+        <p class="mb-2"><span class="font-semibold text-accent3">My Role:</span> ${p.role}</p>
+        <p class="mb-2"><span class="font-semibold text-accent3">Impact:</span> ${p.impact}</p>
+        <p class="text-sm text-accent2 font-semibold mt-2">Tech Stack: ${p.tech}</p>
+      `;
+    }
+    function prevProject() {
+      current = (current - 1 + projects.length) % projects.length;
+      renderProject(current);
+    }
+    function nextProject() {
+      current = (current + 1) % projects.length;
+      renderProject(current);
+    }
+    renderProject(current);
+    </script>
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mohit-bohra-b30a21251/" target="_blank" title="LinkedIn"><span>🔗</span>LinkedIn</a>
+            <a href="https://github.com/Mohitbohra18" target="_blank" title="GitHub"><span>💻</span>GitHub</a>
+            <a href="mohit_resume.pdf" target="_blank" title="Resume"><span>📄</span>Resume</a>
+            <a href="tel:9389608659" title="Phone"><span>📞</span>9389608659</a>
+            <a href="mailto:manvendarsinghbohra@gmail.com" title="Email"><span>✉️</span>manvendarsinghbohra@gmail.com</a>
+        </div>
+        <div class="footer-contact">
+            &copy; 2025 Mohit Bohra. Crafted with passion and code.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Bohra - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="text-xl font-bold text-gray-800">Mohit Bohra</div>
+            <div class="space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
+                <a href="skills.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Skills</a>
+                <a href="projects.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Projects</a>
+                <a href="achievements.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Achievements</a>
+                <a href="takeaways.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Takeaways</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <div class="section-container">
+      <div class="split mb-12 animate-fadeInUp">
+        <div class="split-half flex flex-col justify-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Mohit 👋</h1>
+          <h2 class="text-2xl font-semibold mb-4">Aspiring Software Engineer & Tech Enthusiast</h2>
+          <p class="text-lg mb-6">Welcome to my portfolio! Here, you'll find a snapshot of my journey, skills, and achievements. I'm passionate about building impactful solutions, learning new technologies, and growing through real-world experiences. Dive in to explore my projects, technical skills, and the lessons I've learned along the way.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="about.html" class="btn btn-secondary">More About Me</a>
+            <a href="mohit_resume.pdf" class="btn" target="_blank">Download Resume</a>
+          </div>
+        </div>
+        <div class="split-half split-img">
+          <img src="profile1.png" alt="Mohit Profile Photo" class="shadow-lg" />
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div class="card animate-fadeInUp">
+          <h3 class="text-xl font-bold mb-2">Projects</h3>
+          <p class="mb-4">Explore my hands-on projects, from campus navigation apps to web development and AI experiments. Each project reflects my problem-solving skills and creativity.</p>
+          <a href="projects.html" class="btn btn-secondary">View Projects</a>
+        </div>
+        <div class="card animate-fadeInUp">
+          <h3 class="text-xl font-bold mb-2">Skills</h3>
+          <p class="mb-4">A showcase of my technical and soft skills, including programming languages, frameworks, teamwork, and communication abilities.</p>
+          <a href="skills.html" class="btn btn-secondary">See Skills</a>
+        </div>
+        <div class="card animate-fadeInUp">
+          <h3 class="text-xl font-bold mb-2">Achievements</h3>
+          <p class="mb-4">Highlights of my academic and extracurricular achievements, awards, and recognitions that have shaped my journey.</p>
+          <a href="achievements.html" class="btn btn-secondary">View Achievements</a>
+        </div>
+        <div class="card animate-fadeInUp">
+          <h3 class="text-xl font-bold mb-2">Takeaways</h3>
+          <p class="mb-4">Personal reflections and growth from key career skills sessions, including group discussions, interviews, and resume writing.</p>
+          <a href="takeaways.html" class="btn btn-secondary">Read Takeaways</a>
+        </div>
+        <div class="card animate-fadeInUp">
+          <h3 class="text-xl font-bold mb-2">Contact</h3>
+          <p class="mb-4">Let's connect! Reach out for collaborations, opportunities, or just to say hi. Find my LinkedIn, GitHub, and contact details here.</p>
+          <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mohit-bohra-b30a21251/" target="_blank" title="LinkedIn"><span>🔗</span>LinkedIn</a>
+            <a href="https://github.com/Mohitbohra18" target="_blank" title="GitHub"><span>💻</span>GitHub</a>
+            <a href="mohit_resume.pdf" target="_blank" title="Resume"><span>📄</span>Resume</a>
+            <a href="tel:9389608659" title="Phone"><span>📞</span>9389608659</a>
+            <a href="mailto:manvendarsinghbohra@gmail.com" title="Email"><span>✉️</span>manvendarsinghbohra@gmail.com</a>
+        </div>
+        <div class="footer-contact">
+            &copy; 2025 Mohit Bohra. Crafted with passion and code.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for internal links (if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
